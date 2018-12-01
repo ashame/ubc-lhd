@@ -1,21 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    );
-  }
-}
+import HomeScreen from './components/screens/HomeScreen';
+import Profile from './components/screens/Profile';
+import Messages from './components/screens/Messages';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const RootDrawer = createDrawerNavigator({
+  Home: {
+    screen: HomeScreen
   },
+  Profile: {
+    screen: Profile
+  },
+  Messages: {
+    screen: Messages
+  }
 });
+
+const App = createAppContainer(RootDrawer);
+
+export default App;
