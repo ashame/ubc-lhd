@@ -4,19 +4,19 @@ import {
     Image,
     Text,
     TouchableOpacity,
-    View
+    View,
 } from 'react-native';
 import { Constants } from 'expo';
 
-export default class HomeScreen extends Component {
+export default class Messages extends Component {
     static navigationOptions = {
-        title: "Home"              
+        title: "Messages"              
     };
     render() {
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text>HomeScreen Test</Text>
+                <Text>Messages Test</Text>
             </View>
         )
     }

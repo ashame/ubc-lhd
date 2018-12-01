@@ -1,19 +1,23 @@
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
-import HomeScreen from './components/screens/HomeScreen';
-import Profile from './components/screens/Profile';
-import Messages from './components/screens/Messages';
+import Home from './screens/Home';
+import Profile from './screens/Profile';
+import Messages from './screens/Messages';
+import Settings from './screens/Settings';
 
 const RootDrawer = createDrawerNavigator({
   Home: {
-    screen: HomeScreen
+    screen: Home
   },
   Profile: {
     screen: Profile
   },
   Messages: {
     screen: Messages
-  }
+  },
+  Settings: {
+    screen: Settings
+  },
 });
 
 const App = createAppContainer(RootDrawer);

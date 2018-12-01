@@ -4,19 +4,30 @@ import {
     Image,
     Text,
     TouchableOpacity,
-    View
+    View,
+    Slider, 
 } from 'react-native';
 import { Constants } from 'expo';
 
-export default class Messages extends Component {
+export default class Profile extends Component {
     static navigationOptions = {
-        title: "Messages"              
+        title: "Profile"              
     };
     render() {
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text>Messages Test</Text>
+                <Text>Profile</Text>
+                <Text>I am a</Text>
+
+                <Text>Seeking a </Text>
+
+                <Slider
+                    style = {{ width: 300 }}
+                    step = {1}
+                    minimumValue = {0}
+                    maximumValue = {100}
+                />
             </View>
         )
     }
