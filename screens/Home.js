@@ -21,9 +21,8 @@ export default class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        justifyContent: "center",
-        alignItems: "center",
         flex: 1,
+        alignItems: "center",
         marginTop: Constants.statusBarHeight,
     }
 })

@@ -7,6 +7,21 @@ import SwipeCards from 'react-native-swipe-cards';
 class Card extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            cards: [
+                {
+                    text: "Tomato",
+                    backgroundColor: "",
+                },
+                {
+                    text: "Auergine", 
+                    backgroundColor: "",
+                },
+                {
+                    text: "Ghost",
+                }
+            ]
+        }
     }
     render() {
         return (
@@ -37,18 +52,21 @@ export default class extends Component {
         super(props);
         this.state = {
             cards: [
-                { text: 'Tomato', backgroundColor: 'red' },
-                { text: 'Aubergine', backgroundColor: 'purple' },
+                { text: 'Tomato', backgroundColor: '#99ffcc' },
+                { text: 'Aubergine', backgroundColor: '#dd99ff' },
+                { text: 'Ghost', }
             ]
         };
+        this.handleYes = this.handleYes.bind(this);
+        this.handleNo = this.handleNo.bind(this);
     }
 
     handleYes(card) {
-        console.log('Yes for ${card.text}')
+        console.log(`Yes for ${card.text}`)
     }
 
     handleNo(card) {
-        console.log('No for ${card.text}');
+        console.log(`No for ${card.text}`);
     }
 
     render() {
@@ -57,9 +75,8 @@ export default class extends Component {
                 cards={this.state.cards}
                 renderCard={(cardData) => <Card {...cardData} />}
                 renderNoMoreCards={() => <NoMoreCards />}
-
-                handleYes={this.handleYes}
-                handleNo={this.handleNo}
+                handleYup={this.handleYes}
+                handleNope={this.handleNo}
             />
         )
     }

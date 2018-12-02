@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    Button,
     StyleSheet,
     Text,
     View,
@@ -13,13 +14,21 @@ export default class HomeScreen extends Component {
         super(props)
         this.state = {
             sliderValue: 0,
+            data: [{
+                value: 'Man',
+            }, {
+                value: 'Woman',
+            }, {
+                value: 'Other (Please Specify)',
+            }],
         }
+        this.changeMaxDistance= this.changeMaxDistance.bind(this);
     }
     static navigationOptions = {
         title: "Settings"              
     };
 
-    changeSliderValue(newValue) {
+    changeMaxDistance(newValue) {
         this.setState(() => {
             return {
                 sliderValue: parseInt(newValue),
@@ -29,39 +38,47 @@ export default class HomeScreen extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-        const { sliderValue } = this.state;
-        let data = [{
-            value: 'Man',
-        }, {
-            value: 'Woman',
-        }, {
-            value: 'More',
-        }];
+        const { sliderValue, data } = this.state;
         return (
             <View style={styles.container}>
                 <Text>Settings</Text>
                 
                 <Text>Max Distance: {this.state.sliderValue} km</Text>
                 <Slider
-                    style = {{ width: 300 }}
                     step = {1}
                     minimumValue = {0}
                     maximumValue = {100}
-                    onValueChange = {this.changeSliderValue.bind(this)}
-                    value = {sliderValue}
+                    onValueChange = {this.changeMaxDistance}
                 />
                 <Text>Age Range: </Text>
                 <Slider
-                                    
+                    step = {1}
+                    minimumValue = {0}
+                    maximumValue = {100}                                    
                 />
+                
                 <Dropdown 
                 label='I am a' 
-                data={data} 
+                data={data}
+                onChangeText={(v, i) => {
+                    console.log(`value: ${v}, index: ${i}`)
+                }}
                 />
+
                 <Dropdown
                 label='Looking for a'
                 data={data}
+                animationDuration={0}
+                onChangeText={(v, i) => {
+                    console.log(`value: ${v}, index: ${i}`)
+                }}
                 />
+
+                <Button
+                    title = "Romantic Orientation"
+                    onPress = {()=> navigate('RomanticOrientation')}
+                />
+
             </View>
         )
     }
