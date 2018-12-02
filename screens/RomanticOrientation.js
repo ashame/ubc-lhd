@@ -3,12 +3,10 @@ import {
     Button,
     StyleSheet,
     View,
-    Text,
     TextInput
 } from 'react-native';
 import { Constants } from 'expo';
-import { Dropdown } from 'react-native-material-dropdown';
-import RadioForm, { RadioButton, RadioButtonInput, RadioButtonLabel } from 'react-native-simple-radio-button';
+import RadioForm from 'react-native-simple-radio-button';
 
 
 var radio_props = [

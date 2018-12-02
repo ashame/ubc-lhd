@@ -1,6 +1,5 @@
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
 
-import Home from './screens/Home';
 import Settings from './screens/Settings';
 import CardScreen from './screens/CardScreen';
 import RomanticOrientation from './screens/RomanticOrientation';
