@@ -13,11 +13,11 @@ const RootDrawer = createDrawerNavigator({
   Profile:{
     screen: Profile
   },
-  RomanticOrientation: {
-    screen: RomanticOrientation
-  },
   Settings: {
     screen: Settings
+  },
+  RomanticOrientation: {
+    screen: RomanticOrientation
   },
 });
 
