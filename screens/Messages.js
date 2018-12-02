@@ -9,10 +9,7 @@ import {
     View,
 } from 'react-native';
 
-import { Constants } from 'expo';
 import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
-import CustomActions from './CustomActions';
-import CustomView from './CustomView';
 
 export default class Messages extends Component {
   static navigationOptions = {

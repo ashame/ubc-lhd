@@ -3,9 +3,7 @@ import {
     StyleSheet,
     Image,
     Text,
-    TouchableOpacity,
     View,
-    Slider, 
 } from 'react-native';
 import { Constants } from 'expo';
 

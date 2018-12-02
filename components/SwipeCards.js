@@ -7,21 +7,6 @@ import SwipeCards from 'react-native-swipe-cards';
 class Card extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            cards: [
-                {
-                    text: "Tomato",
-                    backgroundColor: "",
-                },
-                {
-                    text: "Auergine", 
-                    backgroundColor: "",
-                },
-                {
-                    text: "Ghost",
-                }
-            ]
-        }
     }
     render() {
         return (
