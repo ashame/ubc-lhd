@@ -8,13 +8,12 @@ import { Constants } from 'expo';
 
 export default class HomeScreen extends Component {
     static navigationOptions = {
-        title: "Home"              
+        title: "Home"
     };
     render() {
-        const { navigate } = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text>HomeScreen Test</Text>
+                <Text>Homescreen Test!</Text>
             </View>
         )
     }
