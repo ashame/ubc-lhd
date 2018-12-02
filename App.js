@@ -7,20 +7,17 @@ import RomanticOrientation from './screens/RomanticOrientation';
 import Profile from './screens/Profile';
 
 const RootDrawer = createDrawerNavigator({
-  Settings: {
-    screen: Settings
-  },
   Home: {
-    screen: Home
+    screen: CardScreen
   },
   Profile:{
     screen: Profile
   },
-  Cards: {
-    screen: CardScreen
-  },
   RomanticOrientation: {
     screen: RomanticOrientation
+  },
+  Settings: {
+    screen: Settings
   },
 });
 

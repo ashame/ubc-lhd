@@ -61,7 +61,9 @@ export default class HomeScreen extends Component {
                 label='I am a' 
                 data={data}
                 onChangeText={(v, i) => {
-                    console.log(`value: ${v}, index: ${i}`)
+                    if (i === 2) {
+                        navigate('RomanticOrientation');
+                    }
                 }}
                 />
 
@@ -70,13 +72,10 @@ export default class HomeScreen extends Component {
                 data={data}
                 animationDuration={0}
                 onChangeText={(v, i) => {
-                    console.log(`value: ${v}, index: ${i}`)
+                    if (i === 2) {
+                        navigate('RomanticOrientation');
+                    }
                 }}
-                />
-
-                <Button
-                    title = "Romantic Orientation"
-                    onPress = {()=> navigate('RomanticOrientation')}
                 />
 
             </View>

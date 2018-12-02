@@ -39,7 +39,9 @@ export default class extends Component {
             cards: [
                 { text: 'Tomato', backgroundColor: '#99ffcc' },
                 { text: 'Aubergine', backgroundColor: '#dd99ff' },
-                { text: 'Ghost', }
+                { text: 'Carrot', backgroundColor: '#ff0000' },
+                { text: 'Lettuce', backgroundColor: '#9abd19' },
+
             ]
         };
         this.handleYes = this.handleYes.bind(this);

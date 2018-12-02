@@ -15,9 +15,10 @@ export default class Profile extends Component {
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.container}>
-                <Text>Profile</Text>
                 <Image
+                    style={{flex: 1}}
                     source={require('../assets/cat.jpg')}
+                    resizeMode="contain"
                 />
                 <Text></Text>
                 
@@ -28,7 +29,6 @@ export default class Profile extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        justifyContent: "center",
         alignItems: "center",
         flex: 1,
         marginTop: Constants.statusBarHeight,

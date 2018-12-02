@@ -4,7 +4,7 @@ import SwipeCards from '../components/SwipeCards';
 
 export default class CardScreen extends React.Component { 
     static navigationOptions = {
-        title: "Cards",
+        title: "Home",
     }
     render() {
         return( 
